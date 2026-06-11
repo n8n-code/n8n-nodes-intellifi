@@ -1,0 +1,15 @@
+export { authinfoDescription } from './authinfo';
+export { blobsDescription } from './blobs';
+export { eventsDescription } from './events';
+export { itemsDescription } from './items';
+export { keysDescription } from './keys';
+export { kvpairsDescription } from './kvpairs';
+export { locationsDescription } from './locations';
+export { locationrulesDescription } from './locationrules';
+export { presencesDescription } from './presences';
+export { servicesDescription } from './services';
+export { setsDescription } from './sets';
+export { spotsDescription } from './spots';
+export { spotsetsDescription } from './spotsets';
+export { subscriptionsDescription } from './subscriptions';
+export { usersDescription } from './users';
