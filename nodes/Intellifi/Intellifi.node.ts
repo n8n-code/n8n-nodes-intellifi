@@ -16,32 +16,32 @@ import { subscriptionsDescription } from './resources/subscriptions';
 import { usersDescription } from './resources/users';
 
 export class Intellifi implements INodeType {
-	description: INodeTypeDescription = {
-		displayName: 'Intellifi',
-		name: 'N8nDevIntellifi',
-		icon: { light: 'file:./intellifi.png', dark: 'file:./intellifi.dark.png' },
-		group: ['input'],
-		version: 1,
-		subtitle: '={{\$parameter["operation"] + ": " + \$parameter["resource"]}}',
-		description: 'Intellifi Brain technical documentation overview.',
-		defaults: { name: 'Intellifi' },
-		usableAsTool: true,
-		inputs: [NodeConnectionTypes.Main],
-		outputs: [NodeConnectionTypes.Main],
-		credentials: [
-			{
-				name: 'N8nDevIntellifiApi',
-				required: true,
-			},
-		],
-		requestDefaults: {
-			baseURL: '={{\$credentials.url}}',
-			headers: {
-				Accept: 'application/json',
-				'Content-Type': 'application/json',
-			},
-		},
-		properties: [
+        description: INodeTypeDescription = {
+                displayName: 'Intellifi',
+                name: 'N8nDevIntellifi',
+                icon: { light: 'file:./intellifi.png', dark: 'file:./intellifi.dark.png' },
+                group: ['input'],
+                version: 1,
+                subtitle: '={{\$parameter["operation"] + ": " + \$parameter["resource"]}}',
+                description: 'Intellifi Brain technical documentation overview.',
+                defaults: { name: 'Intellifi' },
+                usableAsTool: true,
+                inputs: [NodeConnectionTypes.Main],
+                outputs: [NodeConnectionTypes.Main],
+                credentials: [
+                        {
+                                name: 'N8nDevIntellifiApi',
+                                required: true,
+                        },
+                ],
+                requestDefaults: {
+                        baseURL: '={{\$credentials.url}}',
+                        headers: {
+                                Accept: 'application/json',
+                                'Content-Type': 'application/json',
+                        },
+                },
+                properties: [
 		{
 			"displayName": "Resource",
 			"name": "resource",
@@ -141,6 +141,6 @@ export class Intellifi implements INodeType {
 		...spotsetsDescription,
 		...subscriptionsDescription,
 		...usersDescription
-		],
-	};
+                ],
+        };
 }
